@@ -14,7 +14,7 @@
 
 
     <link rel="shortcut icon" href="img/icons/favicon_photo.ico" type="image/x-icon">
-    <title>KidCams</title>
+    <title>Детские фотоаппараты KidCams.ru</title>
 </head>
 <body>
     <div class="header" id="header">
@@ -25,7 +25,7 @@
               </div>
 
               <div class="col-1 col-xl-1">
-                <img class="promo_img_3" src="img/icons/gift.png" alt="gift">
+                <img class="header_img" src="img/icons/gift.png" alt="gift">
               </div>
 
               <div class="col-2 col-xl-3">
@@ -69,6 +69,7 @@
 
  <section class="promo">
     <div class="container">
+      <h1 class="promo_header">Магазин детских фотоаппаратов KidCams.ru</h1>
         <div class="row">
 
           <div class="col-xs-12 col-md-6">
@@ -76,24 +77,18 @@
               Мир глазами вашего ребенка <br><br>
             </div>
             <div class="promo_2">
-              Более 10 видов в наличии  в Томске
+              Более 10 видов фотоаппаратов в наличии  в Томске
             </div>
           </div>       
             <form class="col-12 col-md-4 offset-md-1 w-25 p-3">
               <div class="form-group">
-                <label for="exampleInputName1">Имя</label>
-                <input type="name" class="form-control" id="exampleInputName1">
+                <input name="name" required placeholder="Ваше имя" type="text" class="form-control">
               </div>
               <div class="form-group">
-                <label for="exampleInputPhone1">Телефон</label>
-                <input type="phone" class="form-control" id="exampleInputPhone1" aria-describedby="PhoneHelp">
-                <small id="PhoneHelp" class="form-text text-muted">Нажимая эту кнопку, я даю согласие на обработку персональных данных</small>
+                <input name="tel" required placeholder="Ваш телефон" type="tel" class="form-control">
+                <small class="form-text text-muted">Нажимая эту кнопку, я даю согласие на обработку персональных данных</small>
               </div>
-              <!-- <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Нажимая эту кнопку, я даю согласие на обработку персональных данных</label>
-              </div> -->
-              <button type="submit" class="btn btn-info">Заказать сейчас</button>
+              <button type="submit" class="btn btn-info">Заказать сейчас</button> 
             </form>
             
         </div>
@@ -146,7 +141,7 @@
       <h1 class="catalog_header">Каталог</h1>
         <div class="row">
 
-          <div class="card m-2" style="width: 15rem;">
+          <!-- <div class="card m-2" style="width: 15rem;">
             <img src="img/catalog/100.png" class="card-img-top rounded-lg" alt="foto">
             <div class="card-body">
               <h5 class="card-title text-center">Фотокамера "Желтый медвежонок"</h5>
@@ -284,7 +279,7 @@
               <span class="badge badge-pill badge-warning p-2 mb-2">1.900 руб</span>
               <a href="#" class="btn btn-outline-info">Заказать</a>
             </div>
-          </div>
+          </div> 
 
           <div class="card m-2" style="width: 15rem;">
             <img src="..." class="card-img-top rounded-lg" alt="foto">
@@ -293,6 +288,236 @@
               <p class="card-text text-center"> Функции фото/видео br </p>
               <span class="badge badge-pill badge-warning p-2 mb-2">1.900 руб</span>
               <a href="#" class="btn btn-outline-info">Заказать</a>
+            </div>
+          </div> -->
+
+          <div class="catalog__card">
+            <!-- <img src="img/catalog/mini_blue+.jpg" alt="mini_blue" class="catalog__card__img"> -->
+            <div id="mini" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/catalog/mini_blue.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/mini_pink.jpg" class="d-block w-100" alt="...">
+                </div>
+
+              </div>
+              <a class="carousel-control-prev" href="#mini" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#mini" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="catalog__card__subtitle">Фотокамера "Мини"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: желто-голубой/желто-розовый</li>
+              <li>Функции фото/видео</li>
+              <li>Фильтры и фоторамки</li>
+              <li>Разрешение фото: 2560*1080</li>
+              <li>Разрешающая способность видео: 1080*720</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">2.750 ₽</div>
+                <div class="catalog__card__new">1.900 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
+            </div>
+          </div>
+
+          <div class="catalog__card">
+            <!-- <img src="img/catalog/bear_blue_mini.jpg" alt="bear_blue" class="catalog__card__img"> -->
+            <div id="bears" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/catalog/bear_blue_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/bear_orange_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/bear_pink_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/bear_yellow_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#bears" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#bears" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="catalog__card__subtitle">Фотокамера "Медвежонок"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: желтый/голубой/розовый/оранжевый</li>
+              <li>Рамки / фотоэффекты: Есть</li>
+              <li>Игры: Snake, Tetris, PushBox</li>
+              <li>Таймер от 2 до 10с</li>
+              <li>Зум: от 1.0x до 3.0x</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">3.700 ₽</div>
+                <div class="catalog__card__new">2.490 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
+            </div>
+          </div>
+
+          <div class="catalog__card">
+            <!-- <img src="img/catalog/rabbit_white_mini.jpg" alt="" class="catalog__card__img"> -->
+            <div id="rabbit" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/catalog/rabbit_white_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/rabbit_pink_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/rabbit_blue_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/rabbit_yellow_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#rabbit" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#rabbit" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="catalog__card__subtitle">Фотокамера "Зайка"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: желтый/голубой/розовый/белый</li>
+              <li>Рамки / фотоэффекты: Есть</li>
+              <li>Игры: Snake, Tetris, PushBox</li>
+              <li>Таймер от 2 до 10с</li>
+              <li>Зум: от 1.0x до 3.0x</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">3.700 ₽</div>
+                <div class="catalog__card__new">2.490 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
+            </div>
+          </div>
+
+          <div class="catalog__card">
+            <img src="img/catalog/31.png" alt="" class="catalog__card__img">
+            <div class="catalog__card__subtitle">Фотокамера "Пчелка"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: оранжевый</li>
+              <li>Рамки / фотоэффекты: Есть</li>
+              <li>Игры: Snake, Tetris, PushBox</li>
+              <li>Таймер от 2 до 10с</li>
+              <li>Зум: от 1.0x до 3.0x</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">3.200 ₽</div>
+                <div class="catalog__card__new">2.780 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
+            </div>
+          </div>
+
+          <div class="catalog__card">
+            <!-- <img src="img/catalog/cat_pink_mini.jpg" alt="" class="catalog__card__img"> -->
+            <div id="cat" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/catalog/cat_pink_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/cat_blue_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#cat" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#cat" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="catalog__card__subtitle">Фотокамера "Котик"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: голубой/розовый</li>
+              <li>Фото/видео/игры</li>
+              <li>Разрешение фото: 1920*1080</li>
+              <li>Разрешение видео: 4608*3456</li>
+              <li>Зум: от 1.0x до 3.0x</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">3.700 ₽</div>
+                <div class="catalog__card__new">3.200 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
+            </div>
+          </div>
+
+          <div class="catalog__card">
+            <!-- <img src="img/catalog/monstr_blue_mini.jpg" alt="" class="catalog__card__img"> -->
+            <div id="monstr" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/catalog/monstr_blue_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/catalog/monstr_pink_mini.jpg" class="d-block w-100" alt="...">
+                </div>
+
+              </div>
+              <a class="carousel-control-prev" href="#monstr" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#monstr" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="catalog__card__subtitle">Фотокамера "Монстрик"</div>
+            <ul class="catalog__card__descr">
+              <li>Цвет: голубой/розовый</li>
+              <li>Фото/фидео/игры</li>
+              <li>Разрешение фото: 1920*1080</li>
+              <li>Разрешение видео: 4608*3456</li>
+              <li>Зум: от 1.0x до 3.0x</li>
+              <li>Размер дисплея: 2 дюйма</li>
+            </ul>
+            <hr>
+            <div class="catalog__card__footer">
+              <div class="catalog__card__prices">
+                <div class="catalog__card__old">3.700 ₽</div>
+                <div class="catalog__card__new">3.200 ₽</div>
+              </div>
+              <button class="catalog__card__btn">Заказать</button>
             </div>
           </div>
 
@@ -399,17 +624,15 @@
       <div class="col-2 offset-md-1">
         <img src="img/icons/plain.png" alt="plain">
       </div> 
-      <form class="w-100 p-3 bg-light rounded-lg col-12 col-md-4 offset-md-1 ">
-        <div class="form-group">
-          <label for="exampleInputName1">Имя</label>
-          <input type="name" class="form-control" id="exampleInputName1">
+       <form class="w-100 p-3 bg-light rounded-lg col-12 col-md-4 offset-md-1"> 
+         <div class="form-group">
+          <input name="name" required placeholder="Ваше имя" type="text" class="form-control">
         </div>
         <div class="form-group">
-          <label for="exampleInputPhone1">Телефон</label>
-          <input type="phone" class="form-control" id="exampleInputPhone1" aria-describedby="PhoneHelp">
-          <small id="PhoneHelp" class="form-text text-muted">Нажимая эту кнопку, я даю согласие на обработку персональных данных</small>
+          <input name="tel" required placeholder="Ваш телефон" type="tel" class="form-control">
+          <small class="form-text text-muted">Нажимая эту кнопку, я даю согласие на обработку персональных данных</small>
         </div>
-        <button type="submit" class="btn btn-info">Заказать сейчас</button>
+        <button type="submit" class="btn btn-info">Заказать сейчас</button> 
       </form>
     </div>
     
