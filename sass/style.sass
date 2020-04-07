@@ -1,0 +1,259 @@
+*
+  font-family: 'Comfortaa', cursive
+
+.header
+  position: absolute
+  width: 100%
+  height: 90px
+  background-color: rgba(255, 213, 0, 0.4)
+  margin-top: 50px
+  z-index: 2
+  display: flex
+  wrap: no-wrap
+  a
+    font-size: 30px
+    font-weight: 400
+  &_text
+    font-weight: 600
+    padding-top: 20px
+  &_call
+    font-size: 20px
+    font-weight: 300
+    padding-right: 70px
+    padding-top: 10px
+  &_offer
+    font-size: 20px
+    font-weight: 300
+    padding-right: 70px
+    padding-top: 15px 
+    
+
+nav
+  height: 50px
+  background-color: rgba(125, 199, 248, 0.6)
+  position: fixed
+  width: 100%
+  z-index: 100
+
+.hamburger
+  display: none
+.menu
+  display: flex
+  justify-content: space-around
+  &_link
+    color: #fff
+  &_item
+    margin-left: 45px
+    font-weight: 400
+    font-size: 20px
+    list-style: none
+    margin-top: 10px
+
+.promo
+  min-height: 650px
+  background: url(../img/main3.png) center (center / cover) repeat
+  &_header
+    text-align: center
+    font-size: 50px
+    font-weight: 700
+    color: #833434
+    padding: 170px 0 30px 0
+  &_1
+    font-size: 40px
+    font-weight: 700
+    color: darkviolet
+    text-align: center
+    line-height: 1.4
+  &_2
+    font-size: 40px
+    font-weight: 700
+    text-align: center
+    color: rgb(2, 172, 175)
+    line-height: 1.3
+    padding-bottom: 20px
+
+.plus
+  min-height: 100px
+  padding: 10px
+  background-color: rgba(252, 165, 165, 0.6)
+  display: flex
+  justify-content: space-between
+  .col-md-2
+    font-size: 15px
+    text-align: center
+    font-weight: 400  
+    img
+      width: 40%
+
+.catalog
+  min-height: 800px
+  background-color: rgba(248, 200, 96, 0.6)
+  padding: 15px
+  &_header
+    text-align: center
+  .col-9
+    font-weight: 600 
+  &__card
+    width: 320px
+    min-height: 270px
+    background-color: #fff
+    border: 1px solid #dddddd
+    border-radius: 10px
+    padding: 0 15px 10px 20px
+    margin: 0 20px 25px 20px
+    flex-wrap: wrap
+    .carousel-control-next-icon, .carousel-control-prev-icon
+      background-color: #c7c7c7
+      border-radius: 15px
+      padding: 15px
+      height: 70px
+    &__img
+      display: block
+      width: 270px
+      height:auto
+      margin: 2px auto
+    &__subtitle
+      font-size: 19px
+      font-weight: 600
+      text-align: center
+      padding-bottom: 15px
+    &__descr
+      padding: 0
+      list-style-type: none
+      font-size: 15px  
+      font-weight: 300
+    &__footer
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-left: 15px
+    &__old
+      color: #555555
+      font-size: 12px
+      font-weight: 300
+      text-decoration: line-through 
+      margin: 0 0 5px 8px  
+    &__new 
+      background-color: #ffffff
+      border: 1.5px solid #ffc107  
+      border-radius: 10px 
+      font-size: 14px
+      font-weight: 700
+      margin: 0 0 8px
+      padding: 7px
+      border-radius: 25px
+    &__btn
+      background-color: #ffc107
+      border: none
+      border-radius: 10px
+      padding: 6px 12px
+      margin-right: 15px
+      font-size: 16px
+      font-weight: 700
+    .line-through
+      text-decoration: line-through 
+
+
+.warranty
+  min-height: 200px
+  background-color: rgba(248, 234, 103, 0.6)
+  &_header
+    text-align: center
+    font-weight: 300
+    padding-top: 15px
+
+
+.delivery
+  min-height: 200px
+  background-color: rgba(153, 250, 174, 0.6)
+  &_header
+    text-align: center
+    font-weight: 300
+    padding-top: 15px
+
+.recomend
+  min-height: 600px
+  background-color: rgba(177, 237, 248, 0.6)
+  padding: 15px
+  &_header
+    text-align: center
+    font-weight: 300
+  p
+    font-size: 13px
+
+.order
+  min-height: 320px
+  background-color: rgba(105, 102, 255, 0.342)
+  padding: 15px
+  &_header
+    text-align: center
+    font-weight: 300
+
+.contacts
+  min-height: 600px
+  background-color: rgba(216, 144, 250, 0.6)
+  padding: 15px
+  &_header
+    text-align: center
+    font-weight: 300
+    padding-top: 15px
+  a
+    font-size: 25px
+    font-weight: 600
+  &_map
+    width: 100%  
+
+
+footer
+  min-height: 100px
+  background-color: rgba(255, 213, 0, 0.4)
+  display: flex
+  justify-content: space-between
+
+.footer_wrapper
+  display: flex
+  justify-content: space-between
+  padding: 15px 0 20px 0
+
+.footer_block_1
+  width: 30%
+  font-size: small
+  font-weight: 300
+  padding-left: 20px
+  text-align: center
+
+.footer_block_2
+  width: 65%
+  font-size: small
+  font-weight: 300
+  padding-right: 20px
+  text-align: justify
+
+label
+  color: red
+
+.pageup
+  display: block
+  position: fixed
+  bottom: 40px
+  right: 40px
+  width: 80px
+  height: 80px
+  img
+    width: 100%
+
+
+@import 'media'
+
+.soglasie
+  width: 100%
+  background: url(../img/main3.png) center (center / cover) repeat
+  font-size: 14px
+  h1
+    font-size: 15px
+    text-align: center
+    padding-top: 20px
+  p 
+    margin: 0
+    padding: 25px 20px 15px 20px
+
