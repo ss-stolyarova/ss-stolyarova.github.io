@@ -102,16 +102,37 @@ nav
     padding: 0 15px 10px 20px
     margin: 0 20px 25px 20px
     flex-wrap: wrap
+    .carousel_inner
+      position: relative
+    .slick-next, .slick-prev
+      background-color: #fff
+      border: none
+      border-radius: 100%
+      display: block
+      position: absolute
+    .slick-next
+      top: 45%
+      left: 80%
+    .slick-prev 
+      top: 45%
+      left: 0
+      z-index: 1
     .carousel-control-next-icon, .carousel-control-prev-icon
       background-color: #c7c7c7
       border-radius: 15px
       padding: 15px
       height: 70px
+    .slick-slide 
+      img
+        display: block
+        margin: 0 auto
+        width: 70%  
     &__img
       display: block
-      width: 270px
+      width: 200px
       height:auto
       margin: 2px auto
+
     &__subtitle
       font-size: 19px
       font-weight: 600
@@ -180,6 +201,26 @@ nav
     font-weight: 300
   p
     font-size: 13px
+  .carousel_inner
+    position: relative
+  .slick-slide
+    img
+      display: block
+      width: 90%
+      margin: 0 auto
+  .slick-next, .slick-prev
+    background-color: #fff
+    border: none
+    border-radius: 100%
+    display: block
+    position: absolute
+  .slick-next
+    top: 45%
+    right: 0%
+  .slick-prev 
+    top: 45%
+    left: 0%
+    z-index: 1  
 
 .order
   min-height: 320px
@@ -229,6 +270,8 @@ footer
   padding-right: 20px
   text-align: justify
 
+.modal-content
+  width: 90%
 label
   color: red
 
@@ -256,4 +299,30 @@ label
   p 
     margin: 0
     padding: 25px 20px 15px 20px
+
+.overlay 
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  background-color: rgba(0,0,0, .56)
+  z-index: 2
+  .modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 70%
+    height: 85%
+    padding: 10px
+    &__close
+      cursor: pointer
+      img
+        position: absolute
+        top: 0%
+        right: 0%
+    &__order
+
+
 

@@ -17,11 +17,37 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function(){
+
+    $('.carousel_inner').slick({
+        speed: 1200,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/left.png"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="img/icons/right.png"></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    dots: false,
+                    arrows: true
+                }
+            }
+        ]
+    });
     
+    // Modal
+
+    $('[data-modal=order]').on('click', function() {
+        $('.overlay, #order-form').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #thanks, #order-form').fadeOut('slow');
+    });
+
     $('.btn_order').each(function(i) {
         $(this).on('click', function() {
-            $('#order .modal-body__descr').text($('.catalog__card__subtitle').eq(i).text());
-        });
+            $('#order-form .modal-body__descr').text($('.catalog__card__subtitle').eq(i).text());
+            $('.overlay, #order-form').fadeIn('slow');
+        })
     });
 
     function validateForms(form){
@@ -42,7 +68,7 @@ $(document).ready(function(){
     $('input[name=phone]').mask("+7-999-999-99-99");
 
 
-/*     $('form').submit(function(e) {
+    $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -55,9 +81,9 @@ $(document).ready(function(){
             $('form').trigger('reset');
         });
         return false;
-    });   */  
+    });   
     
-     $('form').submit(function() {
+/*     $('form').submit(function() {
         $.ajax({
             type: "POST",
             url: "mailer/smart.php",
@@ -69,7 +95,7 @@ $(document).ready(function(){
             $('form').trigger('reset');
         });
         return false;
-    });   
+    });  */  
  
 
     //smooth scroll and page up
