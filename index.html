@@ -83,16 +83,16 @@
               Более 10 видов фотоаппаратов в наличии  в Томске
             </div>
           </div>       
-            <form class="col-12 col-md-4 offset-md-1 w-25 p-3" id="promo-form" action="#">
+            <form id="promo-form" class="col-12 col-md-4 offset-md-1 w-25 p-3" action="#">
               <div class="form-group">
-                <input name="name"  placeholder="Ваше имя" type="text" class="form-control">
+                <input name="name" placeholder="Ваше имя" type="text" class="form-control">
               </div>
               <div class="form-group">
-                <input name="phone"  placeholder="Ваш телефон" class="form-control">
-                <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="soglasie.html" target="_blank">согласие</a> на обработку персональных данных</small>
+                <input name="phone" placeholder="Ваш телефон" type="tel" class="form-control">
+                <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="#soglasie" data-modal="soglasie">согласие</a> на обработку персональных данных</small>
               </div>
-              <button type="submit" class="btn btn-info">Заказать сейчас</button> 
-            </form>
+              <button class="btn btn-block btn-info button_submit" id="btn_promo">Заказать сейчас</button> 
+            </form>        
             
         </div>
     </div>  
@@ -104,11 +104,11 @@
             <div class="col-6 col-md-2">
                 <img src="img/icons/bear.png" alt="bear"> 
                 <br>
-                Яркий и веселый дизайн, различные цвета и формы <!-- - точно понравится ребенку -->
+                Яркий и веселый дизайн, различные цвета и формы
             </div>
 
             <div class="col-6 col-md-2">
-                Безопасный пластиковый корпус и чехол <!-- - без вредных и опасных веществ  -->
+                Безопасный пластиковый корпус и чехол
                 <br>
                 <img src="img/icons/chekin.png" alt="chekin">
             </div>
@@ -116,11 +116,11 @@
             <div class="col-6 col-md-2">
                 <img src="img/icons/brain.png" alt="brain"> 
                 <br>
-                Простое и понятное управление <!--даже для ребенка-->
+                Простое и понятное управление
             </div>
 
             <div class="col-6 col-md-2">
-                Небольшой размер и вес <!-- - удобно держать в руках-->
+                Небольшой размер и вес
                 <br>
                 <img src="img/icons/ok.png" alt="ok">
             </div>
@@ -128,7 +128,7 @@
             <div class="col-6 col-md-2">
                 <img src="img/icons/usb.png" alt="usb"> 
                 <br>
-                Зарядка от аккумулятора <!--cпасет вас от частой смены батареек-->
+                Зарядка от аккумулятора
             </div>
 
             <div class="col-6 col-md-2">
@@ -147,24 +147,6 @@
       <div class="col-10 offset-1"> <br> Карта памяти MicroSD на 16Гб В ПОДАРОК к вашему заказу!</div>
             
         <div class="catalog__card">
-              <!-- <div id="mini" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/catalog/mini_blue.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/catalog/mini_pink.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#mini" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#mini" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div> -->
               <div class="carousel_inner">
                 <div><img src="img/catalog/mini_blue.jpg"></div>
                 <div><img src="img/catalog/mini_pink.jpg" ></div>
@@ -176,43 +158,20 @@
                 <li>Фильтры и фоторамки</li>
                 <li>Размер дисплея: 2 дюйма</li>
                 <li>Таймер от 2 до 10 сек</li>
-                <li>Установка даты</li>
+                <li>Самая миниатюрная фотокамера из всего ассортимента</li>
               </ul>
               <hr>
               <div class="catalog__card__footer">
                 <div class="catalog__card__prices">
-                  <!-- <div class="catalog__card__old">2.650 ₽</div> -->
-                  <div class="catalog__card__new">2.200 ₽</div>
+                  <div class="catalog__card__new">
+                    <div class="catalog__card__old">2.200 ₽</div>
+                  </div>
                 </div>
-                <button type="button" class="btn btn-warning btn_order" data-modal="order">Заказать</button>
+                <button type="button" class="btn btn-warning btn_order" data-modal="order" disabled>Заказать</button>
               </div>
         </div>
 
         <div class="catalog__card">
-            <!-- <div id="bears" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/catalog/bear_blue_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/bear_orange_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/bear_pink_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/bear_yellow_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#bears" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#bears" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div> -->
             <div class="carousel_inner">
               <div><img src="img/catalog/bear_blue_mini.jpg"></div>
               <div><img src="img/catalog/bear_orange_mini.jpg" ></div>
@@ -236,35 +195,10 @@
                 <div class="catalog__card__new">2.700 ₽</div>
               </div>
               <button type="button" class="btn btn-warning btn_order" data-modal="order">Заказать</button>
-
             </div>
         </div>
 
         <div class="catalog__card">
-            <!-- <div id="rabbit" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/catalog/rabbit_white_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/rabbit_pink_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/rabbit_blue_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/rabbit_yellow_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#rabbit" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#rabbit" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div> -->
             <div class="carousel_inner">
               <div><img src="img/catalog/rabbit_white_mini.jpg"></div>
               <div><img src="img/catalog/rabbit_pink_mini.jpg" ></div>
@@ -288,7 +222,6 @@
                 <div class="catalog__card__new">2.800 ₽</div>
               </div>
               <button type="button" class="btn btn-warning btn_order" data-modal="order">Заказать</button>
-
             </div>
         </div>
 
@@ -307,7 +240,6 @@
             <hr>
             <div class="catalog__card__footer">
               <div class="catalog__card__prices">
-                <!-- <div class="catalog__card__old">3.200 ₽</div> -->
                 <div class="catalog__card__new">2.900 ₽</div>
               </div>
               <button type="button" class="btn btn-warning btn_order" data-modal="order">Заказать</button>
@@ -316,24 +248,6 @@
         </div>
 
         <div class="catalog__card">
-            <!-- <div id="cat" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/catalog/cat_pink_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/cat_blue_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#cat" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#cat" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div> -->
             <div class="carousel_inner">
               <div><img src="img/catalog/cat_pink_mini.jpg"></div>
               <div><img src="img/catalog/cat_blue_mini.jpg" ></div>
@@ -361,26 +275,7 @@
         </div>
 
         <div class="catalog__card">
-            <!-- <div id="monstr" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/catalog/monstr_blue_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/catalog/monstr_pink_mini.jpg" class="d-block w-100" alt="...">
-                </div>
-
-              </div>
-              <a class="carousel-control-prev" href="#monstr" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#monstr" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div> -->
-            <div class="carousel_inner">
+          <div class="carousel_inner">
               <div><img src="img/catalog/monstr_blue_mini.jpg"></div>
               <div><img src="img/catalog/monstr_pink_mini.jpg" ></div>
             </div>
@@ -411,102 +306,30 @@
 
 <div class="overlay">
 
-<!-- <form class="order-form" action="#" id="order-form" method="">
-    <div class="modal fade" id="order" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="FormLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title" id="FormLabel"> Ваш заказ:</h2>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="modal-body__descr">Фотокамера "Наименование"</div>
-            <div class="modal-body__bonus">+ карта памяти MicroSD на 16Гб </div>        
-            <br>
-            <div class="form-group mb-2">
-              <input name="name"  placeholder="Ваше имя" type="text" class="form-control">
-              <br>
-              <input name="phone"  placeholder="Ваш телефон" class="form-control mb-2">
-              <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="soglasie.html" target="_blank">согласие</a> на обработку персональных данных</small>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Нет, выберу другую</button>
-            <button type="submit" class="btn btn-warning">Да, хочу такую!</button>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </form>  -->
-
-<!-- <form action="#" id="order-form">
-    <div class="modal modal_order">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="FormLabel"> Ваш заказ:</h2>
-          <div class="modal__close"><img src="img/icons/close.png" alt="close"></div>
-        </div>
-        <div class="modal-body">
-          <div class="modal-body__descr">Фотокамера "Наименование"</div>
-          <div class="modal-body__bonus">+ карта памяти MicroSD на 16Гб </div>        
-          <br>
-            <input name="name"  placeholder="Ваше имя" type="text" class="form-control">
-            <br>
-            <input name="phone"  placeholder="Ваш телефон" class="form-control mb-2">
-            <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="soglasie.html" target="_blank">согласие</a> на обработку персональных данных</small>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-warning ">Да, хочу такую!</button>
-        </div>
-      </div>
-    </div>
-  </form> -->
-    
-  <form id="order-form" action="#">
-    <div class="modal modal-content modal_order">
+  <form class="modal modal-dialog" id="order-form" action="#">
+    <div class="modal-content modal_order">
       <div class="modal-header">
         <h3 class="modal-title" id="FormLabel"> Ваш заказ:</h3>
         <div class="modal__close"><img src="img/icons/close.png" alt="close"></div>
       </div>
       <div class="modal-body">
-        <div class="modal-body__descr">Фотокамера "Наименование"</div>
+        <div class="modal-body__descr">Детская фотокамера</div>
         <div class="modal-body__bonus">+ карта памяти MicroSD на 16Гб </div> <br>
         <div class="form-group">
           <input name="name"  placeholder="Ваше имя" type="text" class="form-control">
         </div>
         <div class="form-group">
           <input name="phone"  placeholder="Ваш телефон" class="form-control">
-          <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="soglasie.html" target="_blank">согласие</a> на обработку персональных данных</small>
+          <small class="form-text text-muted">Нажимая эту кнопку, я даю <a href="#soglasie" data-modal="soglasie">согласие</a> на обработку персональных данных</small>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary modal__close">Нет, выберу другую</button> <br>
-        <button type="submit" class="btn btn-warning">Заказать сейчас</button> 
+        <button class="btn btn-warning  button_submit" id="btn">Заказать сейчас</button> 
       </div>
     </div>
   </form>   
 
-<!--   <div class="modal modal__mini" id="thanks">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Спасибо за ваш заказ!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Мы свяжемся с вами в ближайшее время для уточнения деталей</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Вернуться на сайт</button>
-        </div>
-      </div>
-    </div>
-  </div>  -->
-  
   <div class="modal modal_mini" id="thanks">
     <div class="modal-content">
       <div class="modal-header">
@@ -517,7 +340,35 @@
         <p>Мы свяжемся с вами в ближайшее время для уточнения деталей</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning modal__close" data-dismiss="modal">Вернуться на сайт</button>
+        <button type="button" class="btn btn-warning modal__close">Вернуться на сайт</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal soglasie modal-dialog-scrollable" id="soglasie">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Согласие пользователя сайта на обработку персональных данных</h4>
+      </div>
+      <div class="modal-body">
+        <p class="soglasie_text"> 
+          Настоящим я, далее – «Субъект Персональных Данных», во исполнение требований Федерального закона от 27.07.2006 г. № 152-ФЗ «О персональных данных» (с изменениями и дополнениями) свободно, своей волей и в своем интересе даю свое согласие Организации «Магазин детских фотоаппаратов KidCams.ru» (ОГРНИП 317703100078553), далее – «Веб-сайт», на обработку своих персональных данных, указанных путем заполнения веб-формы на сайте www KidCams.ru, со следующими условиями: <br>
+          1. Данное Согласие дается на обработку персональных данных, как без использования средств автоматизации, так и с их использованием. Согласие дается на обработку следующих моих персональных данных: фамилия, имя, отчество; номер телефона (домашний/ сотовый); электронная почта; пользовательские данные (сведения о местоположении, тип и версия ОС, тип и версия Браузера, тип устройства и разрешение его экрана; источник, откуда пришел на сайт пользователь; с какого сайта или по какой рекламе; язык ОС и Браузера; какие страницы открывает и на какие кнопки нажимает пользователь; ip-адрес); данные обо мне, которые станут известны в ходе исполнения договоров (в случае заключения договора между мной и Организацией), а также иная общедоступная информация обо мне. <br>
+          2. Персональные данные не являются общедоступными. <br>
+          3. Цель обработки персональных данных: обработка входящих запросов физических лиц с целью оказания консультирования по различным вопросам, относящимся к сфере предпринимательской деятельности Организации; аналитики действий физического лица на веб-сайте и функционирования веб-сайта. <br>
+          4. Основанием для обработки персональных данных является статья 24 Конституции Российской Федерации; статья 6 Федерального закона № 152-ФЗ «О персональных данных»; настоящее Согласие посетителя сайта на обработку персональных данных. <br>
+          5. В ходе обработки с персональными данными будут совершены следующие действия: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (распространение, предоставление, доступ), блокирование, удаление, уничтожение. <br>
+          6. Настоящим я уведомлен Организацией, что предполагаемыми пользователями персональных данных являются работники Организации, а также лица, привлеченные Организацией на условиях гражданско-правового договора. <br>
+          7. Я ознакомлен (а), что: <br>
+          7.1. настоящее Согласие на обработку моих персональных данных является бессрочным и может быть отозвано посредством направления мною в адрес Организации письменного заявления. Датой отзыва считается день, следующий за днем вручения Организации письменного заявления об отзыве Согласия пользователя сайта на обработку персональных данных; <br>
+          7.2. имею право на доступ к моим персональным данным, требовать уточнения (обновление, изменение) моих персональных данных, а также удаления и уничтожения моих персональных данных в случае их обработки Организацией, нарушающих мои законные права и интересы, законодательство Российской Федерации. <br>
+          7.3. в случае отзыва Согласия на обработку персональных данных Организация вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2.11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных данных» от 27.07.2006 г. <br>
+          8. Настоящим Согласием я подтверждаю, что являюсь субъектом предоставляемых персональных данных, а также подтверждаю достоверность предоставляемых данных. <br>
+          9. Настоящее Согласие действует все время до момента прекращения обработки персональных данных, согласно п. 7.1 Согласия.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-block btn-outline-secondary modal__close">Вернуться на сайт</button>
       </div>
     </div>
   </div>
@@ -576,49 +427,6 @@
           <div><img src="img/sms/6.jpg"></div>
           <div><img src="img/sms/7.jpg"></div>
         </div>
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/sms/1.jpg" class="d-block w-100" alt="1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/2.jpg" class="d-block w-100" alt="2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/3.jpg" class="d-block w-100" alt="3">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/4.jpg" class="d-block w-100" alt="4">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/5.jpg" class="d-block w-100" alt="5">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/6.jpg" class="d-block w-100" alt="6">
-            </div>
-            <div class="carousel-item">
-              <img src="img/sms/7.jpg" class="d-block w-100" alt="7">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div> -->
       </div>
 
     </div>
@@ -669,17 +477,11 @@
   </div>
 </footer>
 
-<!-- <a href="#up" class="pageup">
+<a href="#up" class="pageup">
   <img src="img/icons/up.png" alt="up">
-</a> -->
+</a>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<!-- <script src="js/jQuery_v3.5.0.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script> 
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> --> 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
- 
 <script src="js/slick.min.js"></script> 
 <script src="js/jquery.validate.min.js"></script> 
 <script src="js/jquery.maskedinput.min.js"></script>

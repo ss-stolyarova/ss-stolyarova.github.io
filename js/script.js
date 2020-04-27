@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
 $(document).ready(function(){
 
     $('.carousel_inner').slick({
-        speed: 1200,
+        speed: 900,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/icons/right.png"></button>',
@@ -35,13 +35,16 @@ $(document).ready(function(){
     });
     
     // Modal
-
     $('[data-modal=order]').on('click', function() {
         $('.overlay, #order-form').fadeIn('slow');
     });
     $('.modal__close').on('click', function() {
-        $('.overlay, #thanks, #order-form').fadeOut('slow');
+        $('.overlay, #thanks, #order-form, #soglasie').fadeOut('slow');
+    }); 
+    $('[data-modal=soglasie]').on('click', function() {
+        $('.overlay, #soglasie').fadeIn('slow');
     });
+
 
     $('.btn_order').each(function(i) {
         $(this).on('click', function() {
@@ -63,12 +66,12 @@ $(document).ready(function(){
         });
     };
     validateForms('#promo-form');
-    validateForms('#order-form');
+    validateForms('#order-form'); 
 
     $('input[name=phone]').mask("+7-999-999-99-99");
 
-
-    $('form').submit(function(e) {
+//Прежняя версия
+/*      $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -81,26 +84,29 @@ $(document).ready(function(){
             $('form').trigger('reset');
         });
         return false;
-    });   
+    });  */   
     
-/*     $('form').submit(function() {
+    //E-mail Ajax Send
+    $("#promo-form, #order-form").submit(function() { //Change
+        var th = $(this);
         $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
+        type: "POST",
+        url: "mail.php", //Change
+        data: th.serialize()
         }).done(function() {
-            $(this).find("input").val("");
-            $('form').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
-            $('form').trigger('reset');
+        alert('.overlay, #thanks');
+        setTimeout(function() {
+            // Done Functions
+            th.trigger("reset");
+        }, 1000);
         });
         return false;
-    });  */  
+    });
  
 
     //smooth scroll and page up
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1600) {
+        if ($(this).scrollTop() > 800) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
