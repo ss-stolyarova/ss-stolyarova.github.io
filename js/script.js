@@ -53,7 +53,8 @@ $(document).ready(function(){
         })
     });
 
-    function validateForms(form){
+    //валидация форм
+/*     function validateForms(form){
         $(form).validate({
             rules: {
             name: "required",
@@ -66,11 +67,13 @@ $(document).ready(function(){
         });
     };
     validateForms('#promo-form');
-    validateForms('#order-form'); 
+    validateForms('#order-form');   */   
+
+
 
     $('input[name=phone]').mask("+7-999-999-99-99");
 
-//Прежняя версия
+    //Отправка данных из формы
 /*      $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
@@ -79,34 +82,65 @@ $(document).ready(function(){
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('form').fadeOut();
+            $('#order-form').fadeOut();
             $('.overlay, #thanks').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
-    });  */   
-    
-    //E-mail Ajax Send
-    $("#promo-form, #order-form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-        type: "POST",
-        url: "mail.php", //Change
-        data: th.serialize()
-        }).done(function() {
-        alert('.overlay, #thanks');
-        setTimeout(function() {
-            // Done Functions
-            th.trigger("reset");
-        }, 1000);
+    });  */ 
+
+
+    //ПРОбный иной скрипт
+    $('#promo-form').validate({
+        rules: {
+          name: "required",
+          phone: "required"
+        },
+        messages: {
+          name: "Пожалуйста, введите свое имя",
+          phone: "Пожалуйста, введите свой номер телефона",
+        },
+        submitHandler: function(form) {
+          $.post({
+            url: "mailer/smart.php",
+            //contentType: 'application/json',
+            data: $(form).serialize(),
+          }).done(function() {
+            $(this).find("input").val("");
+            // $('#order-form').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
         });
         return false;
+        }
     });
- 
+
+    $('#order-form').validate({
+        rules: {
+          name: "required",
+          phone: "required"
+        },
+        messages: {
+          name: "Пожалуйста, введите свое имя",
+          phone: "Пожалуйста, введите свой номер телефона",
+        },
+        submitHandler: function(form) {
+          $.post({
+            url: "mailer/smart.php",
+            data: $(form).serialize()
+          }).done(function() {
+            $(this).find("input").val("");
+            $('#order-form').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+        }
+    });
 
     //smooth scroll and page up
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 800) {
+        if ($(this).scrollTop() > 1000) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
